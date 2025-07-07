@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+      GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -61,6 +63,30 @@ jobs:
 
             fs.mkdirSync(targetDir, { recursive: true });
             fs.writeFileSync(targetFile, Buffer.from(download.data, 'binary'));
+
+      - name: Download release assets
+        id: assets
+        run: |
+          TMPDIR=$(mktemp -d)
+          
+          gh release download "${{ env.VERSION }}" \
+            --pattern "*.deb" \
+            --dir "$TMPDIR"
+          DEB_PATH=$(find "$TMPDIR" -name "*.deb" | head -n1)
+
+          echo "deb_path=$DEB_PATH" >> $GITHUB_OUTPUT
+          echo "tmpdir=$TMPDIR" >> $GITHUB_OUTPUT
+
+      - name: Update APT distribution
+        run: |
+          ./scripts/update-apt.sh \
+            "${{ env.CHANNEL }}" \
+            "${{ steps.assets.outputs.deb_path }}"
+
+      - name: Cleanup
+        if: always()
+        run: |
+          rm -rf "${{ steps.assets.outputs.tmpdir }}"
 
       - name: Commit & Push
         run: |
