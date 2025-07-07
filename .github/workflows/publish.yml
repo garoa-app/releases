@@ -1,0 +1,78 @@
+name: "Publish Release"
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  update-channel:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Determine release channel
+        id: metadata
+        run: |
+          if [[ "${{ github.event.release.tag_name }}" == *"beta"* ]]; then
+            echo "channel=beta" >> $GITHUB_OUTPUT
+          else
+            echo "channel=stable" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Set up environment
+        run: |
+          echo "VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+          echo "CHANNEL=${{ steps.metadata.outputs.channel }}" >> $GITHUB_ENV
+
+      - name: Update version HEAD
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const { release } = context.payload
+
+            const channel = "${{ env.CHANNEL }}";
+            const targetDir = path.join('.', channel);
+            const targetFile = path.join(targetDir, 'latest.json');
+
+            const asset = release.assets.find(a => a.name === 'latest.json');
+
+            if (!asset) {
+              core.setFailed('Could not find "latest.json" asset on the release.');
+              process.exit(1);
+            }
+
+            const download = await github.request(`GET ${asset.url}`, {
+              headers: { accept: 'application/octet-stream' }
+            });
+
+            fs.mkdirSync(targetDir, { recursive: true });
+            fs.writeFileSync(targetFile, Buffer.from(download.data, 'binary'));
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "ci: bump version to \`${{ env.VERSION }}\`"
+          git push
