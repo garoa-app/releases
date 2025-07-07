@@ -1,0 +1,17 @@
+pkgname=garoa-beta
+pkgver=0.1.0~beta.7
+_upstream=0.1.0-beta.7
+pkgrel=1
+pkgdesc="Home of discipline"
+arch=('x86_64')
+url="https://github.com/garoa-app/releases"
+license=('MIT')
+depends=('cairo' 'desktop-file-utils' 'gdk-pixbuf2' 'glib2' 'gtk3' 'hicolor-icon-theme' 'libsoup' 'pango' 'webkit2gtk-4.1')
+options=('!strip' '!emptydirs')
+install=${pkgname}.install
+source_x86_64=("${url}/releases/download/v${_upstream}/Garoa.Beta_${_upstream}_amd64.deb")
+sha256sums_x86_64=('eac187086f810d3a2d77d7428bab454da21f0b71332e43080beb077cf82b3e30')
+
+package() {
+  tar -xvf data.tar.gz -C "${pkgdir}"
+}

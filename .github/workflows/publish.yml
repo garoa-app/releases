@@ -89,6 +89,28 @@ jobs:
           echo "rpm_path=$RPM_PATH" >> $GITHUB_OUTPUT
           echo "tmpdir=$TMPDIR" >> $GITHUB_OUTPUT
 
+      - name: Update AUR distribution
+        uses: addnab/docker-run-action@v3
+        with:
+          image: archlinux:base-devel
+          options: >
+            -v ${{ github.workspace }}:/workspace
+            -v ${{ steps.assets.outputs.tmpdir }}:/host-tmp
+          run: |
+            set -euo pipefail
+            useradd -m -u 1000 builduser
+            chown -R builduser:builduser /workspace /host-tmp
+            su builduser <<'EOF'
+            cd /workspace
+            ./scripts/update-aur.sh \
+              "${{ env.VERSION }}" \
+              "${{ env.CHANNEL }}" \
+              "/host-tmp/$(basename "${{ steps.assets.outputs.deb_path }}")"
+            EOF
+
+      - name: Fix user permissions
+        run: sudo chown -R $UID:$UID . ${{ steps.assets.outputs.tmpdir }}
+
       - name: Update APT distribution
         run: |
           ./scripts/update-apt.sh \
@@ -100,6 +122,8 @@ jobs:
           ./scripts/update-rpm.sh \
             "${{ env.CHANNEL }}" \
             "${{ steps.assets.outputs.rpm_path }}"
+
+      # TODO: Publish to AUR
 
       - name: Cleanup
         if: always()

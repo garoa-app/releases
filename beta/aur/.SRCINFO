@@ -1,0 +1,23 @@
+pkgbase = garoa-beta
+	pkgdesc = Home of discipline
+	pkgver = 0.1.0~beta.7
+	pkgrel = 1
+	url = https://github.com/garoa-app/releases
+	install = garoa-beta.install
+	arch = x86_64
+	license = MIT
+	depends = cairo
+	depends = desktop-file-utils
+	depends = gdk-pixbuf2
+	depends = glib2
+	depends = gtk3
+	depends = hicolor-icon-theme
+	depends = libsoup
+	depends = pango
+	depends = webkit2gtk-4.1
+	options = !strip
+	options = !emptydirs
+	source_x86_64 = https://github.com/garoa-app/releases/releases/download/v0.1.0-beta.7/Garoa.Beta_0.1.0-beta.7_amd64.deb
+	sha256sums_x86_64 = eac187086f810d3a2d77d7428bab454da21f0b71332e43080beb077cf82b3e30
+
+pkgname = garoa-beta
