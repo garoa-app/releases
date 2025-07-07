@@ -22,6 +22,12 @@ jobs:
           ref: ${{ github.event.repository.default_branch }}
           fetch-depth: 0
 
+      - name: Install and cache APT packages
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: createrepo-c jq
+          version: 1.0
+
       - name: Determine release channel
         id: metadata
         run: |
@@ -74,7 +80,13 @@ jobs:
             --dir "$TMPDIR"
           DEB_PATH=$(find "$TMPDIR" -name "*.deb" | head -n1)
 
+          gh release download "${{ env.VERSION }}" \
+            --pattern "*.rpm" \
+            --dir "$TMPDIR"
+          RPM_PATH=$(find "$TMPDIR" -name "*.rpm" | head -n1)
+
           echo "deb_path=$DEB_PATH" >> $GITHUB_OUTPUT
+          echo "rpm_path=$RPM_PATH" >> $GITHUB_OUTPUT
           echo "tmpdir=$TMPDIR" >> $GITHUB_OUTPUT
 
       - name: Update APT distribution
@@ -82,6 +94,12 @@ jobs:
           ./scripts/update-apt.sh \
             "${{ env.CHANNEL }}" \
             "${{ steps.assets.outputs.deb_path }}"
+
+      - name: Update RPM distribution
+        run: |
+          ./scripts/update-rpm.sh \
+            "${{ env.CHANNEL }}" \
+            "${{ steps.assets.outputs.rpm_path }}"
 
       - name: Cleanup
         if: always()

@@ -1,0 +1,6 @@
+[garoa-beta]
+name=Garoa Beta Repository
+baseurl=https://get.garoa.app/beta/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://get.garoa.app/garoa-archive-keyring.gpg

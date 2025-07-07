@@ -1,0 +1,6 @@
+[garoa]
+name=Garoa Stable Repository
+baseurl=https://get.garoa.app/stable/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://get.garoa.app/garoa-archive-keyring.gpg
