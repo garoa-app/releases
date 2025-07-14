@@ -123,7 +123,16 @@ jobs:
             "${{ env.CHANNEL }}" \
             "${{ steps.assets.outputs.rpm_path }}"
 
-      # TODO: Publish to AUR
+      - name: Publish to AUR
+        uses: KSXGitHub/github-actions-deploy-aur@v4.1.1
+        with:
+          pkgname: ${{ env.CHANNEL == 'stable' && 'garoa' || 'garoa-beta' }}
+          pkgbuild: ./${{ env.CHANNEL }}/aur/PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: 'ci: bump version to ${{ env.VERSION }}'
+          force_push: 'true'
 
       - name: Cleanup
         if: always()
