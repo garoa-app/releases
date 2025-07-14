@@ -25,8 +25,7 @@ popd > /dev/null
 
 apt-ftparchive -c="$REPO_ROOT/apt-release.conf" release "$DIST_BASE" > "$DIST_BASE/Release"
 
-echo "$GPG_PRIVATE_KEY" | gpg --batch --yes --import
-
+gpg --batch --yes --import < <(printf '%s\n' "$GPG_PRIVATE_KEY")
 gpg --batch --yes --pinentry-mode loopback --passphrase "$GPG_PASSPHRASE" -abs -o "$DIST_BASE/Release.gpg" "$DIST_BASE/Release"
 gpg --batch --yes --pinentry-mode loopback --passphrase "$GPG_PASSPHRASE" --clearsign -o "$DIST_BASE/InRelease" "$DIST_BASE/Release"
 
