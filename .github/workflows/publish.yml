@@ -133,6 +133,9 @@ jobs:
           ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
           commit_message: 'ci: bump version to ${{ env.VERSION }}'
           force_push: 'true'
+          assets: |
+            ./${{ env.CHANNEL }}/aur/*.install
+            ./${{ env.CHANNEL }}/aur/.SRCINFO
 
       - name: Cleanup
         if: always()
