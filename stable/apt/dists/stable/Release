@@ -1,0 +1,23 @@
+Architectures: amd64
+Codename: stable
+Components: main
+Date: Tue, 15 Jul 2025 15:14:37 +0000
+Label: garoa
+Origin: garoa
+Suite: stable
+MD5Sum:
+ 84be78734f8e23abe0dc8949b199105d              134 Release
+ 7b965f086d947270e314a8ba4915e3d8              408 main/binary-amd64/Packages
+ d1525d29dd24f0bff8eaaf47ab2a6716              321 main/binary-amd64/Packages.gz
+SHA1:
+ fa285ec8cc12b46ef8ec7bb25251dce1dba6e065              134 Release
+ 2e47d27ae05b3f7a3b60c90bd3fedf5105292323              408 main/binary-amd64/Packages
+ 99c13ae12488bea9a37bed06dec3545e5226194d              321 main/binary-amd64/Packages.gz
+SHA256:
+ f40332c38ad18a7075960b5c54d85d9725de6841a563dcecc55eca66c2a364d6              134 Release
+ df46496376ce3755394d2829790f904a7bf905a59cc60e3daba5b8ffe87be6ab              408 main/binary-amd64/Packages
+ 74d35979080625feb8699b0ea8695f2c0f7db01ae7b32c439dfb38f6ec729c71              321 main/binary-amd64/Packages.gz
+SHA512:
+ 4b4b10d911bf2c0c264d8a12ac40d0964febe731b9e3c2c8e23ba9b3297c7ae5ba711e8b325488dbc995167db4dea5065ecc0c76ff05ab73785d7d1b15822f00              134 Release
+ 8aa7c29b786224d1be5f9535cfc3efc4fda7fd0b3f018c50e7cbba8a6c559dfcee07743d878c6ab031cf0821a75ae31d5b649defbb2f9bdf2c8e9f5141b54ec5              408 main/binary-amd64/Packages
+ 213372b66d5ecf8a3f7a8fe0aee721d63993ce4ecc4a6c27e6f1c0aaa57f405ee05d62dc071491380ef7734192d9cebfa6b23ea173bbd22c5c921453aa7f85ca              321 main/binary-amd64/Packages.gz

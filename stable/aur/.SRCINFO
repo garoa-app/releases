@@ -18,6 +18,6 @@ pkgbase = garoa
 	options = !strip
 	options = !emptydirs
 	source_x86_64 = https://github.com/garoa-app/releases/releases/download/v0.1.0/Garoa_0.1.0_amd64.deb
-	sha256sums_x86_64 = SKIP
+	sha256sums_x86_64 = 340753eae6bced73a12a3868e7b159888c50162f5995c837596820b92f6b6ed0
 
 pkgname = garoa
