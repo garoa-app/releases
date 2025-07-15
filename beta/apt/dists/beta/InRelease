@@ -1,0 +1,33 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64
+Codename: beta
+Components: main
+Date: Tue, 15 Jul 2025 15:11:46 +0000
+Label: garoa-beta
+Origin: garoa-beta
+Suite: beta
+MD5Sum:
+ 1a76a7de303521a092e08face5df984f              140 Release
+ 4330acc2217d4678e4df77b5719b1b3c              432 main/binary-amd64/Packages
+ a416f4da0aae1f9975ebc70a69be71cf              333 main/binary-amd64/Packages.gz
+SHA1:
+ c814382641f9f08e0193256ad34a25c7d38c398a              140 Release
+ 3226b7175b54e3c51348100883d8bd189301f050              432 main/binary-amd64/Packages
+ 03fb1ddc2974a7c81cfe665c2251eca6cb09fe13              333 main/binary-amd64/Packages.gz
+SHA256:
+ fa2825d5ae77533bf38dc8d1eb536cb7b4a01846dfc0edcaf206ea6d7f3be873              140 Release
+ 137abc8793b168f2e9d9e0e6ace873098926b744daab51adde145872ecf1f412              432 main/binary-amd64/Packages
+ b95735488099d91aea6d27a02e067949621d79ae90e0602673d1f5e5c9027e29              333 main/binary-amd64/Packages.gz
+SHA512:
+ 2f0632c2d015dec3a4a5452871fecf9a2ad09a4791eb3275e1ac499da0a15961532b70c35b3958bcff3fed32df91454b639b201d8b3f4a5cb987c039ae49c8cb              140 Release
+ 28be8b8ee72384b19291a16c431410fad5df4df3a7096ddc978ccb3ee0dd340d21127a03aec297de0b6c1b18072a697f846e97ac8450bc572802f6feb26fa52b              432 main/binary-amd64/Packages
+ d39e070980466359c879c0436d7a21bb36ab5ee79b9348facae4e6f1b617a1f396b2a97d8206c4af2c149b123a477f6544fedb3085b899c6a7250a49a4e8c120              333 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQRqrinsZbnRLnJEX+8Chh259Wox6gUCaHZvswAKCRAChh259Wox
+6oWrAQD7LYu4GV+MNqKLj9BgJTyqastWqUtCoAtSZC5Yr7Ll8gEAgxZM0hZMGQT6
+TreG9dBNZSkZLmkXUyGWb4nuOfpURw4=
+=5l8Q
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 pkgname=garoa-beta
-pkgver=0.1.0~beta.7
-_upstream=0.1.0-beta.7
+pkgver=0.1.0~beta.8
+_upstream=0.1.0-beta.8
 pkgrel=1
 pkgdesc="Home of discipline"
 arch=('x86_64')
@@ -10,7 +10,7 @@ depends=('cairo' 'desktop-file-utils' 'gdk-pixbuf2' 'glib2' 'gtk3' 'hicolor-icon
 options=('!strip' '!emptydirs')
 install=${pkgname}.install
 source_x86_64=("${url}/releases/download/v${_upstream}/Garoa.Beta_${_upstream}_amd64.deb")
-sha256sums_x86_64=('eac187086f810d3a2d77d7428bab454da21f0b71332e43080beb077cf82b3e30')
+sha256sums_x86_64=('852c302d7865d1091a4f155adfef290b3dea64f2d091fc6a7c0e2928a345250f')
 
 package() {
   tar -xvf data.tar.gz -C "${pkgdir}"
