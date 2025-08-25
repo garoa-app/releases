@@ -28,3 +28,18 @@ Priority: optional
 Description: Home of discipline
  (none)
 
+Package: garoa
+Version: 0.3.0
+Architecture: amd64
+Maintainer: Garoa
+Installed-Size: 24157
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: pool/main/Garoa_0.3.0_amd64.deb
+Size: 9154414
+MD5sum: c3446d0a7c7c654a272676ee4e71c695
+SHA1: 4b60ab9947f3dbf463650df4288dcd062e87b683
+SHA256: 27a60dfba1ab508004173e4c382bd7b5067c058f54b89f53be93bbe4cecb84f1
+Priority: optional
+Description: Home of discipline
+ (none)
+
