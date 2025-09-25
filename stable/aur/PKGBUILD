@@ -1,7 +1,7 @@
 pkgname=garoa
 pkgver=0.3.0
 pkgrel=1
-pkgdesc="Garoa - Home of discipline (Stable release channel)"
+pkgdesc="Home of discipline (Stable release channel)"
 arch=('x86_64')
 url="https://github.com/garoa-app/releases"
 license=('MIT')
