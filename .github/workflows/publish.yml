@@ -156,3 +156,10 @@ jobs:
 
           git commit -m "ci: bump version to \`${{ env.VERSION }}\`"
           git push
+
+      - name: Deploy to Cloudflare network
+        uses: cloudflare/wrangler-action@v3
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          wranglerVersion: "4.20.3"
