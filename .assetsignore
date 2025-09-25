@@ -1,0 +1,17 @@
+node_modules/**
+.DS_Store
+.gitignore
+.git/**
+.github/**
+.env
+.env.*
+secrets/**
+*.pem
+.wrangler/**
+wrangler.jsonc
+package.json
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+TODO.md
+README.md
