@@ -1,23 +1,23 @@
 {
-  "version": "0.4.0",
-  "notes": "https://github.com/garoa-app/releases/releases/tag/v0.4.0",
-  "pub_date": "2025-09-25T20:17:37.497Z",
+  "version": "0.5.0",
+  "notes": "https://github.com/garoa-app/releases/releases/tag/v0.5.0",
+  "pub_date": "2025-10-06T22:38:26.045Z",
   "platforms": {
-    "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUWQrRExrN29GNUxVRDFVYlJaT0NxbWZzQ1Z5d2pXc0h6Q1l2WlQ4RlVocDZuRUMwRFdLd1M4VDlsbzF6OHN5VENPbnVtZWE0ZnhlWHR6NytWWW9TV3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU4ODMwNDYxCWZpbGU6R2Fyb2EuYXBwLnRhci5negpHam9KVmJ4SEMvYitDUnRiajdzQXA4d3NYaEhyUVEzcDJtd3g5MkFpRzBKa1d4WDVvdjJQK3dreFlwWmYvdGdpc01ydjgwQ0g5dE94eHhLTjFjUjdDUT09Cg==",
-      "url": "https://github.com/garoa-app/releases/releases/download/v0.4.0/Garoa_aarch64.app.tar.gz"
-    },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUWZpUmcvV1BlczgxVVRQNkZRSmkxcS9FZVM3M1FKUGE3TDZUWFlaTG5XZzZ6SlVEcE9Jb1lHQUpUcHJ5WlhuY0wxWTdWZkoxUmhqOGJ5cHpzaFZhbVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU4ODMwNjg4CWZpbGU6R2Fyb2EuYXBwLnRhci5negpLZko3Uk02TDBCeHBqaHkxdXJaY1RxTWVMK3FNM2tWL1BlNTh0b1cwa1d2bjhWT1hNT3Q1WEVMV1hZK2hIcnBKUlJieFRyQ2NzNHd1dzNzL2pCcFNBZz09Cg==",
-      "url": "https://github.com/garoa-app/releases/releases/download/v0.4.0/Garoa_x64.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUWM2aVRYV3hjS3NERXZiaGFoQkdDUGMxQnI1dTh5VXRuTGZQMTVCQytzbEgyZ0VJSlJ4dXZhQ3BORlpIV0MyT25QK0w5ZnFhUnZlM3NpRUVmVkpRK1FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU5Nzg5MjMxCWZpbGU6R2Fyb2EuYXBwLnRhci5negpEQngxT0FHOFBuV2ttdnVweXV3WXN2WjFFVWxuVEJxL1d6dkkra2dXMTVrNHV3NWtrVzE0RHh2cUdGZ0lYQmxLTXdqb21WYTg0MEowWmRBNFFkMGNDdz09Cg==",
+      "url": "https://github.com/garoa-app/releases/releases/download/v0.5.0/Garoa_x64.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUWJlN0NDL3RXOVp2dHRkaExodjFhbWE3OVVQMTJWeXNvclZMUzVlVklwRlFBdTVESHV3cUVxYjBRR3MxMUhXL0JqUmtLazVhbXR5K09oekJlMnpEZmdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU5Nzg5NDk5CWZpbGU6R2Fyb2EuYXBwLnRhci5negpsUWFrbEJFYWY5cEdGeS9HOSs4VEhEZXo0eG44ajRjWDB5NFdoVHNOYkp5U0x6bVpYRmExbTdSMVpiTEZDRkhpSzFWZkdvUWNZQ09EUGVQTXUzMVFDUT09Cg==",
+      "url": "https://github.com/garoa-app/releases/releases/download/v0.5.0/Garoa_aarch64.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUVlpOU5QVTJWVjl1RHdTRmJsRjNwbjdVR0FXMjg4Zk9meUJRN3pEbVM3VVlNRWlmZHJCUGc0U1NWbjFmdnNoRWNMOGNuOTl3RjFWQ0xmaHZzYlQ2TmdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU4ODMwOTU3CWZpbGU6R2Fyb2FfMC40LjBfYW1kNjQuQXBwSW1hZ2UKcDJmWUgzdDRVeHI5bzBoSXBCdzhmWlJ6UGZMaFlta0xBY3N3SGl4enJvZHpIWEZwRzQ0elg3TVRseEMwSUhFeE5xYTJuaC9CWldObnJobWUwbDQrQXc9PQo=",
-      "url": "https://github.com/garoa-app/releases/releases/download/v0.4.0/Garoa_0.4.0_amd64.AppImage"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUWRPakp4dlhkVkxHdFdibXpmQWhjU1ZqOUxpU3hKL2s0Y29sdFREdU0ydmlGcTB5cWhyNmMyWHZndCtMS0Fwd3VwUmxxU09QeW04ZVNMU3FRTDhyZ1E0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU5Nzg5NzE4CWZpbGU6R2Fyb2FfMC41LjBfYW1kNjQuQXBwSW1hZ2UKVkNORXBGb3YvRzRnK2ZSQTVJLzl5c2tEWHhRRnV4V1N6cjVNQWRsL1JranFSNStFdjlIOFYxWlpnQlN4WWpocXJuVVRXUFdkeDVuTzBSWmZ1eUNxQUE9PQo=",
+      "url": "https://github.com/garoa-app/releases/releases/download/v0.5.0/Garoa_0.5.0_amd64.AppImage"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUVdDZUxnVXV6dkhSRTBTQzRKQ0d2QXZ1MkN0RGJGeTlBZGdraWtDQW95QnpuUWdYb2c0UU1hanpEMnRsWmIveE1LTjFyWEJLRDF2TjVDSHp3TlB6b1FJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU4ODMxNDU0CWZpbGU6R2Fyb2FfMC40LjBfeDY0LXNldHVwLmV4ZQpBNWo2QnFrQlZMdzRNOXk5ZFpBQWRiVVhXcE5GamkrTHp3ZnFMdXdJM24yc25DdU5hTnd1eWZHNVRqcVNOQ2xwbkJ4VDRYWDljeXI4cTRIYjJSb1ZCZz09Cg==",
-      "url": "https://github.com/garoa-app/releases/releases/download/v0.4.0/Garoa_0.4.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSdXRBMUFUb2liUWVaSU80NEErZXlpYjhQdW5pQnd3dGxpS3I4U1QrdFlRZmlBNjBTa3VTMFFVOWVIUnVWWHBvME0xWTRNNVBMbXhya0o2ekNESmdvVE5SeXBQRVVkSUFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzU5NzkwMzAzCWZpbGU6R2Fyb2FfMC41LjBfeDY0LXNldHVwLmV4ZQpuN1EybHBsMkhjZjNmemRtVE9xbWc4RWg3aGN4VE9zVjEwbXVQdGdSQzZSK2xlYnBvV2ZOVDZpVVMrRWt6WmFTYlkwQ2doc2JQSEZoSDk0VjhjOTNBQT09Cg==",
+      "url": "https://github.com/garoa-app/releases/releases/download/v0.5.0/Garoa_0.5.0_x64-setup.exe"
     }
   }
 }
