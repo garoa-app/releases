@@ -11,7 +11,7 @@
 </p>
 
 > [!WARNING]  
-> Garoa is still under active development, with a major release scheduled for later in 2025. All versions prior to `1.0.0` are considered development builds and may introduce breaking changes without prior notice.
+> Garoa is still under active development, with a major release scheduled for later in 2026. All versions prior to `1.0.0` are considered development builds and may introduce breaking changes without prior notice.
 >
 > If you found a bug or would like to provide feedback, please reach out to <a href="mailto:hello@garoa.app">hello@garoa.app</a>
 
